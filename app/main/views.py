@@ -1,13 +1,14 @@
 from flask.helpers import flash
 from . import main
 from flask import render_template
+from ..models import ProductItem
 
 
 
 @main.route('/')
 def order():
-   
-    return render_template("order.html",title='Order and delivery')
+    products = ProductItem.query.all()
+    return render_template("order.html",title='Order and delivery',products=products)
 
 @main.route('/')
 def addtocart():
