@@ -17,3 +17,5 @@ class CartItem(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     # adding the foreign key
     product_id = db.Column(db.Integer, db.ForeignKey('products.id'))
+    
+    
