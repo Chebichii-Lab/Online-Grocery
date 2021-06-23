@@ -6,9 +6,10 @@ from .. import db
 
 
 
+
 @main.route('/')
 def order():
-
+   
     cart = ProductItem.query.all()
     return render_template("product.html",title='Order and delivery',cart=cart)
 
