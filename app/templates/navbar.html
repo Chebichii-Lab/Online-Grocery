@@ -21,7 +21,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
-                <li><a href="{{url_for('main.index')}}">Order</a></li>
+                <li><a href="{{url_for('main.index')}}">Order here</a></li>
                 <li><a href="{{url_for('main.index')}}">Contact Us</a></li>
                 <br>
                 <li style="color:rgb(15, 14, 15);padding:15px;font-weight: bolder;">{{current_user.username}}</li>
