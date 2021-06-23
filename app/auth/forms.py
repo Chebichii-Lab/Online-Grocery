@@ -27,3 +27,9 @@ class RegForm(FlaskForm):
     def validate_username(self, data_field):
         if User.query.filter_by(username=data_field.data).first():
             raise ValidationError("The username has already been taken")
+from wtforms import  StringField,SubmitField 
+ 
+class NameForm(FlaskForm):
+    name = StringField('Destination to be delivered',)
+    place = StringField('Delivery fee is ksh.100')
+    submit = SubmitField('Submit')

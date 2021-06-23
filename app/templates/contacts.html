@@ -1,19 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- {% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
 
-<head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
-</head>
+{% block content %} -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 
-<div class="container">
-    <h1>OUR CONTACTS</h1>
-    <p>Down below find various ways to contact us</p>
+<style>
+    #background{
+      background-image: url('../static/nadine-redlich-SEF34uHb1jE-unsplash.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+<div class="container" id="background">
+    <h1 style="font-size: 40px; text-align: center; font-weight: bold;">OUR CONTACTS</h1>
+    <p style="text-align: center; font-size: 25px;">Down below find various ways to contact us</p>
 
-    <div class="container">
         <div class="row d-flex mb-5 contact-info">
             <div class="w-100"></div>
-            <div class="col-md-3 d-flex">
+            <div class="col-md-6 d-flex">
                 <div class="info bg-white p-4">
                     <p><span>Address:</span> State House Road P.O Box: 40530-00100 Nairobi, Kenya.</p>
                 </div>
@@ -60,20 +66,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-5">
-                    <div class="col-md">
-                        <div class="ftco-footer-widget mb-4">
-                            <h2 class="ftco-heading-2">Vegefoods</h2>
-                            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                <li class="ftco-animate"><a href="#"><span class="icon-github"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md">
+                <div class="col-lg-6">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Have a Questions?</h2>
                         <div class="block-23 mb-3">
@@ -90,8 +83,5 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
-
-
-</html>
+<!-- {% endblock%} -->
