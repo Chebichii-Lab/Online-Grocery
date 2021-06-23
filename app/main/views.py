@@ -62,8 +62,15 @@ from .forms import UpdateProfile
 
 
 @main.route('/')
+# @login_required
 def index():
   return render_template('index.html')
+
+
+
+# @main.route('/user/<name>/homepage', methods=['GET', 'POST'])
+# def index():
+#   return render_template('home.html')
 
 
 @main.route('/user/<name>')
