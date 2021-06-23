@@ -17,5 +17,14 @@ app.route('/DeliveryForm')
 def delivery():
     return render_template('form.html', form=form)
     
+ 
+@manager.shell
+def make_shell_context():
+    return dict(app=app, db=db, User=User)
+    # pass
+
 if __name__ == '__main__':
     manager.run()
+
+
+ 
