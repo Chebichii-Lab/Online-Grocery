@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>DELIVERY FORM<h1>
+<form action="" method="post">
+     <p>
+        {{form.username.label}} <br>
+        {{form.username(size=30)}}
+     </p>
+     <p>
+        {{form.stringfield.label}} <br>
+        {{form.stringfield(size=30)}}
+     </p>
+     <p>
+        {{form.submit()}} 
+     </p>
+</form>
+
+{% endblock %}
