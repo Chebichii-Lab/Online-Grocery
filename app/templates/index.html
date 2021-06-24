@@ -1,10 +1,91 @@
-<div class="col-md-8">
-    {% with messages = get_flashed_messages(with_categories=true)  %}
-  {% if messages%}
-  {%for category, message in messages%}
-  <div class="alert alert-{{category}}">
-    {{ message }}
-  </div>
-  {% endfor %}
-  {%endif%}
-  {% endwith%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>The Generics | Store</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script src="./js/script.js" async></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-nav nav">
+            </nav>
+            <h1 class="band-name band-name-large">The Online Groceries</h1>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">Vegetables</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Spinach</span>
+                    <img class="shop-item-image" src="../static/images/spinach2.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$12.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Onions</span>
+                    <img class="shop-item-image" src="../static/images/Onions1.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$14.99</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Tomatoes</span>
+                    <img class="shop-item-image" src="../static/images/Tomato.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$9.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Fruits</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Bananas</span>
+                    <img class="shop-item-image" src="../static/images/Pepper.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$19.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Mangoes</span>
+                    <img class="shop-item-image" src="../static/images/Tomatoes.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$6.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <h1 class="cart-total-title" style="text-align:center;">Total</h1>
+                <br>
+                <h1 class="cart-total-price" style="text-align:center; font-size: 40px;">$0</h1>
+            </div>
+        
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">The Online Groceries</h3>
+                
+            </div>
+        </footer>
+    </body>
+</html>

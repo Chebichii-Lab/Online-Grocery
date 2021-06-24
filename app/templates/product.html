@@ -1,85 +1,91 @@
-   <!DOCTYPE html>
-   <html lang="en">
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-   <head>
-       <meta charset="UTF-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Document</title>
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   </head>
-
-   <body>
-       <section id="" class="">
-           <div class="container">
-               <h1>Welcome to Online Groceries</h1>
-               <div class="row">
-                   <div class="col-md-4">
-                       <img class="main-image" width="200px"
-                           src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z3JvY2VyaWVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                       <h2>{{ name }}</h2>
-                       <div class="price">$20</div>
-
-                           <br>
-                           <button type="button" class="btn btn-success">Add to cart</button>
-                       </p>
-
-
-                   </div>
-                   <div class="col-md-4">
-                       <img class="main-image" width="200px"
-                           src="https://images.unsplash.com/photo-1599274952981-4b6ff4d2af1c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxncm9jZXJpZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                       <h2>{{ name }}</h2>
-                       <div class="price">$29</div>
-
-                           <br />
-                           <button type="button" class="btn btn-success">Add to cart</button>
-
-
-                   </div>
-                   <div class="col-md-4">
-                       <img class="main-image" width="200px"
-                           src="https://images.unsplash.com/photo-1598357850653-a610249f7417?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGdyb2Nlcmllc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                       <h2>{{ name }}</h2>
-                       <div class="price">$19</div>
-                           <br />
-                           <button type="button" class="btn btn-success">Add to cart</button>
-                   </div>
-               </div>
-               <div class="row">
-                   <div class="col-md-4">
-                    <img class="main-image" width="200px"
-                    src="https://images.unsplash.com/photo-1598357850653-a610249f7417?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGdyb2Nlcmllc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                <h2>{{ name }}</h2>
-                <div class="price">
-                    $20
+        <title>The Groceries | Store</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script src="./js/script.js" async></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-nav nav">
+            </nav>
+            <h1 class="band-name band-name-large">The Online Groceries</h1>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">Vegetables</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Spinach</span>
+                    <img class="shop-item-image" src="../static/images/spinach2.jpg" width="30px">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$12.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
                 </div>
-                <button type="button" class="btn btn-success">Add to cart</button>
-
+                <div class="shop-item">
+                    <span class="shop-item-title">Onions</span>
+                    <img class="shop-item-image" src="../static/images/Onions1.jpg" width="30px">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$14.99</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Tomatoes</span>
+                    <img class="shop-item-image" src="../static/images/Tomato.jpg" width="30px">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$9.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Fruits</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Bananas</span>
+                    <img class="shop-item-image" src="../static/images/Pepper.jpg" width="30px">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$19.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Mangoes</span>
+                    <img class="shop-item-image" src="../static/images/Tomatoes.jpg" width="30px">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$6.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <h1 class="cart-total-title" style="text-align:center;">Total</h1>
                 <br>
-                   </div>
-                   <div class="col-md-4">
-                    <img class="main-image" width="200px"
-                        src="https://images.unsplash.com/photo-1598357850653-a610249f7417?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGdyb2Nlcmllc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                    <h2>{{ name }}</h2>
-                    <div class="price">$29</div>
-                        <br />
-                        <button type="button" class="btn btn-success">Add to cart</button>
-                   
-                </div>
-                <div class="col-md-4">
-                    <img class="main-image" width="200px"
-                        src="https://images.unsplash.com/photo-1598357850653-a610249f7417?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGdyb2Nlcmllc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                    <h2>{{ name }}</h2>
-                    <div class="price">$20</div>
-                        <br />
-                        <button type="button" class="btn btn-success">Add to cart</button>
-                   
-                </div>
-               </div>
-           </div>
-       </section>
-   </body>
-
-   </html>
+                <h1 class="cart-total-price" style="text-align:center; font-size: 40px;">$0</h1>
+            </div>
+        
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">The Online Groceries</h3>
+                
+            </div>
+        </footer>
+    </body>
+</html>
