@@ -4,17 +4,18 @@
 
 <h1>DELIVERY FORM<h1>
 <form action="" method="post">
-     <p>
-        {{form.username.label}} <br>
-        {{form.username(size=30)}}
-     </p>
-     <p>
-        {{form.stringfield.label}} <br>
-        {{form.stringfield(size=30)}}
-     </p>
-     <p>
-        {{form.submit()}} 
-     </p>
-</form>
-
+       <fieldset>
+           <label for="username">Username</label>
+           <input type="text" name="username" placeholder="username">
+       </fieldset>
+       <fieldset>
+           <label for="email"> Email</label>
+           <input type="email" name="email" placeholder="xyz@gmail.com">
+       </fieldset>
+       <fieldset>
+           <label for="place">Place</label>
+           <input type="place" name="place" placeholder="place">
+       </fieldset>
+       <button type="submit">Deliver</button>
+   </form>
 {% endblock %}

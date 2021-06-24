@@ -11,3 +11,5 @@ app.config['SECRET_KEY'] = '8644'
 
 # Flask-Bootstrap requires this line
 Bootstrap(app)
+ 
+from app import views

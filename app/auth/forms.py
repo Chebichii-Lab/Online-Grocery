@@ -1,7 +1,10 @@
 from flask_wtf import FlaskForm
 from wtforms import  StringField,SubmitField 
- 
+from wtforms.validators import DataRequired, Email
+from .forms import NameForm
+
 class NameForm(FlaskForm):
-    name = StringField('Destination to be delivered',)
+    username = StringField('Destination to be delivered',)
+    email = StringField('email', validators=[DataRequired(), Email()])
     place = StringField('Delivery fee is ksh.100')
-    submit = SubmitField('Submit')
+    send = SubmitField('Submit')
