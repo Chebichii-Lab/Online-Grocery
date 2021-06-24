@@ -1,10 +1,9 @@
 from flask_wtf import FlaskForm
-from wtforms import  StringField,SubmitField 
-from wtforms.validators import DataRequired, Email
- 
+from wtforms import StringField, SelectField, TextAreaField, SubmitField
+from wtforms.validators import Required
 
-class NameForm(FlaskForm):
-    username = StringField('Destination to be delivered',)
-    email = StringField('email', validators=[DataRequired(), Email()])
-    place = StringField('Delivery fee is ksh.100')
-    send = SubmitField('Submit')
+
+class UpdateProfile(FlaskForm):
+    bio = TextAreaField('Write a brief bio about you.',
+                        validators=[Required()])
+    submit = SubmitField('Save')

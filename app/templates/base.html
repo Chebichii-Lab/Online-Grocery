@@ -1,1 +1,15 @@
+<<<<<<< HEAD
 {% extends "bootstrap/base.html" %}
+=======
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+{% endblock %}
+
+<!-- Navbar block  -->
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+>>>>>>> 4a3f3550d2cce7fae30bff489bd149cc9b545e31
