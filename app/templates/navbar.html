@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <div class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #dbb264;" role="navigation">
+    <div class="navbar navbar-inverse navbar-dark"  role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,10 +21,10 @@
 
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
-                <li><a href="{{url_for('main.index')}}">Order here</a></li>
+                <li><a href="{{url_for('main.product')}}">Order here</a></li>
                 <li><a href="{{url_for('main.index')}}">Contact Us</a></li>
                 <br>
-                <li style="color:rgb(15, 14, 15);padding:15px;font-weight: bolder;">{{current_user.username}}</li>
+                <li style="color:rgb(255, 251, 255);padding:15px;font-weight: bolder;">{{current_user.username}}</li>
                 <li><a href="{{url_for('main.profile',name=current_user.username)}}">Profile</a></li>
                 <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
                 

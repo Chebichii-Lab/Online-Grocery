@@ -66,6 +66,11 @@ from .forms import UpdateProfile
 def index():
   return render_template('index.html')
 
+@main.route('/product')
+# @login_required
+def product():
+  return render_template('product.html')
+
 
 
 # @main.route('/user/<name>/homepage', methods=['GET', 'POST'])
