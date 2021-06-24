@@ -1,15 +1,22 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask
+from config import config_options
 from flask_bootstrap import Bootstrap
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
+from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
+bootstrap = Bootstrap()
+db = SQLAlchemy()
 
-# Flask-WTF requires an encryption key - the string can be anything
-app.config['SECRET_KEY'] = '8644'
-
-# Flask-Bootstrap requires this line
-Bootstrap(app)
- 
-from app import views
+def create_app(config_name):
+    app = Flask(__name__)
+    
+    app.config.from_object(config_options[config_name])
+    
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+     
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
+    
+    bootstrap.init_app(app)
+    db.init_app(app)
+    
+    return app

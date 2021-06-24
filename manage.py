@@ -1,30 +1,32 @@
-from app import request
-from flask import Flask, render_template
+from app import create_app, db
+from flask_script import Manager, Server
+from flask_migrate import Migrate, MigrateCommand
  
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = "38977877"
+ 
+from flask.cli import with_appcontext
+# Creating app instance.
+app = create_app("development")
+manager = Manager(app)
+manager.add_command('server', Server)
+migrate = Migrate(app, db)
+manager.add_command('db', MigrateCommand)
 
-app.route('/')
-def home():
-    return 'DELIVERY'
-   
-app.route("/form", methods=["GET", "POST"])
-def form():
-    if request.method == "POST":
-     username = request.form["username"]
-     email = request.form["email"]
-     place = request.form["place"]
-     return username + email + "Your oder will be delivered to" + place
-    return  render_template('form.html')
+@manager.command
+def test():
+    """Run the unit tests."""
+    import unittest
+    tests = unittest.TestLoader().discover('tests')
+    unittest.TextTestRunner(verbosity=2).run(tests)
+    
+@manager.shell
+def make_shell_context():
+    return dict(app = app, db = db)
 
-app.route('/DeliveryForm')
-def delivery():
-    return render_template('form.html', form=form)
+if __name__ == '_main_':
+    app.run()
     
 
-if __name__ == '__main__':
-    app.run()
-
+ 
 
  
